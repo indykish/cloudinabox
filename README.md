@@ -2,13 +2,13 @@
 Megdc
 ================
 
-CLI based installer that sets up our datacenter based Megam cloud platform. 
+CLI based installer that sets up our datacenter based Megam cloud platform.
 
 
 ### Requirements
 
-> 
-[Golang 1.5.1 > +](http://www.golang.org/dl)
+>
+[Golang 1.6 > +](http://www.golang.org/dl)
 
 
 ## Usage
@@ -21,7 +21,7 @@ medc megaminstall --megamnilavu
 ```
 
 
-### Compile from source 
+### Compile from source
 
 
 ```
@@ -36,7 +36,7 @@ cd megdc
 make
 
 ```
-  
+
 
 ### Documentation
 
@@ -50,16 +50,18 @@ We are glad to help if you have questions, or request for new features..
 
 
 
-	
+
 # License
 
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
 | **Author:**          | Rajthilak (<rajthilak@megam.io>)
-| 	               | KishorekumarNeelamegam (<nkishore@megam.io>)
-| 	               | Thomas Alrin (<thomasalrin@megam.io>)
-| **Copyright:**       | Copyright (c) 2013-2015 Megam Systems.
+| 	                   | KishorekumarNeelamegam (<nkishore@megam.io>)
+| 	                   | Thomas Alrin (<thomasalrin@megam.io>)
+|                      | M Vijaykanth (<mvijaykanth@megam.io>)
+|                      | R Ranjitha (<ranjithar@megam.io>)
+| **Copyright:**       | Copyright (c) 2013-2016 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -73,5 +75,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
- 
-
