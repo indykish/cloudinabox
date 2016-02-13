@@ -44,11 +44,11 @@ func (tpl *UbuntuSnowflakeRemove) Run(target urknall.Target) error {
 type UbuntuSnowflakeRemoveTemplate struct{}
 
 func (m *UbuntuSnowflakeRemoveTemplate) Render(pkg urknall.Package) {
-	pkg.AddCommands("megamsnowflake",
+	pkg.AddCommands("verticesnowflake",
 		Shell("service snowflake stop"),
-		RemovePackage("megamsnowflake"),
+		RemovePackage("verticesnowflake"),
 		RemovePackages(""),
-		PurgePackages("megamsnowflake"),
+		PurgePackages("verticesnowflake"),
 		Shell("dpkg --get-selections megam*"),
 	)
 	pkg.AddCommands("snowflake-clean",

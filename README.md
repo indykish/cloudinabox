@@ -14,9 +14,9 @@ CLI based installer that sets up our datacenter based Megam cloud platform.
 ## Usage
 
 ```
-# To install package megamnilavu in your local system.
+# To install package verticenilavu in your local system.
 
-medc megaminstall --megamnilavu
+megdc verticeinstall --verticenilavu
 
 ```
 

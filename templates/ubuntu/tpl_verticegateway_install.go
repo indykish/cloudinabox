@@ -21,36 +21,36 @@ import (
 	"github.com/megamsys/urknall"
 )
 
-var ubuntusnowflakeinstall *UbuntuSnowflakeInstall
+var ubuntugatewayinstall *UbuntuGatewayInstall
 
 func init() {
-	ubuntusnowflakeinstall = &UbuntuSnowflakeInstall{}
-	templates.Register("UbuntuSnowflakeInstall", ubuntusnowflakeinstall)
+	ubuntugatewayinstall = &UbuntuGatewayInstall{}
+	templates.Register("UbuntuGatewayInstall", ubuntugatewayinstall)
 }
 
-type UbuntuSnowflakeInstall struct{}
+type UbuntuGatewayInstall struct{}
 
-func (tpl *UbuntuSnowflakeInstall) Render(p urknall.Package) {
-	p.AddTemplate("snowflake", &UbuntuSnowflakeInstallTemplate{})
+func (tpl *UbuntuGatewayInstall) Render(p urknall.Package) {
+	p.AddTemplate("gateway", &UbuntuGatewayInstallTemplate{})
 }
 
-func (tpl *UbuntuSnowflakeInstall) Options(t *templates.Template) {
+func (tpl *UbuntuGatewayInstall) Options(t *templates.Template) {
 }
 
-func (tpl *UbuntuSnowflakeInstall) Run(target urknall.Target) error {
-	return urknall.Run(target, &UbuntuSnowflakeInstall{})
+func (tpl *UbuntuGatewayInstall) Run(target urknall.Target) error {
+	return urknall.Run(target, &UbuntuGatewayInstall{})
 }
 
-type UbuntuSnowflakeInstallTemplate struct{}
+type UbuntuGatewayInstallTemplate struct{}
 
-func (m *UbuntuSnowflakeInstallTemplate) Render(pkg urknall.Package) {
-
+func (m *UbuntuGatewayInstallTemplate) Render(pkg urknall.Package) {
+	//fail on Java -version (1.8 check)
 	pkg.AddCommands("repository",
 		Shell("echo 'deb [arch=amd64] "+DefaultMegamRepo+"' > "+ListFilePath),
 		UpdatePackagesOmitError(),
 	)
 
-	pkg.AddCommands("megamsnowflake",
-		InstallPackages("megamsnowflake"),
+	pkg.AddCommands("verticegateway",
+		InstallPackages("verticegateway"),
 	)
 }
