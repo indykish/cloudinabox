@@ -2,7 +2,7 @@
 Megdc
 ================
 
-CLI based installer that sets up our datacenter based Megam cloud platform.
+CLI based installer that sets up your datacenter based on Megam cloud platform.
 
 
 ### Requirements
